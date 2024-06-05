@@ -1,0 +1,45 @@
+﻿<Window x:Class="ProiectM42.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Elevator Simulation" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sensor and Elevator Display -->
+        <Grid Grid.Column="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Elevator Levels -->
+            <Rectangle x:Name="Elevator" Fill="Gray" Grid.Row="5" Height="50" Width="50" HorizontalAlignment="Center"/>
+
+            <!-- Sensors -->
+            <Ellipse Fill="{Binding B11Color}" Width="50" Height="50" Grid.Row="0" HorizontalAlignment="Right" Margin="5"/>
+            <Ellipse Fill="{Binding B9Color}" Width="50" Height="50" Grid.Row="1" HorizontalAlignment="Right" Margin="5"/>
+            <Ellipse Fill="{Binding B8Color}" Width="50" Height="50" Grid.Row="2" HorizontalAlignment="Right" Margin="5"/>
+            <Ellipse Fill="{Binding B7Color}" Width="50" Height="50" Grid.Row="3" HorizontalAlignment="Right" Margin="5"/>
+            <Ellipse Fill="{Binding B6Color}" Width="50" Height="50" Grid.Row="4" HorizontalAlignment="Right" Margin="5"/>
+            <Ellipse Fill="{Binding B10Color}" Width="50" Height="50" Grid.Row="5" HorizontalAlignment="Right" Margin="5"/>
+        </Grid>
+
+        <!-- Control Buttons -->
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="0" Click="Button_Click_0" Width="50" Height="50" Margin="5"/>
+            <Button Content="1" Click="Button_Click_1" Width="50" Height="50" Margin="5"/>
+            <Button Content="2" Click="Button_Click_2" Width="50" Height="50" Margin="5"/>
+            <Button Content="3" Click="Button_Click_3" Width="50" Height="50" Margin="5"/>
+            <Button Content="4" Click="Button_Click_4" Width="50" Height="50" Margin="5"/>
+            <Button Content="5" Click="Button_Click_5" Width="50" Height="50" Margin="5" Background="Purple" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>
